@@ -1,3 +1,4 @@
+import 'package:example/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,8 +21,9 @@ class ExampleApp extends StatelessWidget {
             color: Colors.black,
           ),
         ),
+        primarySwatch: Colors.grey,
       ),
-      home: const Scaffold(),
+      home: const HomeView(),
     );
   }
 }
