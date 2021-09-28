@@ -32,11 +32,12 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
+Just wrap on any widget that you like:
 ```dart
-const like = 'sample';
+Bounceable(
+  onTap: () {},
+  child: ...
+);
 ```
 
 ## Additional information
