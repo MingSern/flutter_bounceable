@@ -39,6 +39,14 @@ Bounceable(
   child: ...
 );
 ```
+or you can customize the bouncing animation to look like `react-native-bounceable` (https://www.npmjs.com/package/@freakycoder/react-native-bounceable):
+```dart
+Bounceable(
+  onTap: () {},
+  
+  child: ...
+);
+```
 
 ## Additional information
 
