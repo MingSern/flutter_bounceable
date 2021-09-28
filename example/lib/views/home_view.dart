@@ -18,6 +18,10 @@ class HomeView extends StatelessWidget {
           Bounceable(
             onTap: () {},
             scaleFactor: 0.5,
+            duration: const Duration(seconds: 1),
+            reverseDuration: const Duration(milliseconds: 200),
+            curve: Curves.elasticInOut,
+            reverseCurve: Curves.ease,
             child: const Icon(
               Icons.search,
               size: 28,
@@ -27,6 +31,10 @@ class HomeView extends StatelessWidget {
           Bounceable(
             onTap: () {},
             scaleFactor: 0.5,
+            duration: const Duration(seconds: 1),
+            reverseDuration: const Duration(milliseconds: 200),
+            curve: Curves.elasticInOut,
+            reverseCurve: Curves.ease,
             child: const Icon(
               Icons.shopping_bag_outlined,
               size: 28,
@@ -35,81 +43,6 @@ class HomeView extends StatelessWidget {
           const SizedBox(width: 20),
         ],
       ),
-      // body: ListView(
-      //   children: [
-      //     const Padding(
-      //       padding: EdgeInsets.symmetric(
-      //         horizontal: 25,
-      //         vertical: 15,
-      //       ),
-      //       child: Text(
-      //         "What's New",
-      //         style: TextStyle(
-      //           fontSize: 24,
-      //           fontWeight: FontWeight.bold,
-      //         ),
-      //       ),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.symmetric(horizontal: 25),
-      //       child: Bounceable(
-      //         onTap: () {},
-      //         child: PhysicalModel(
-      //           color: Colors.black,
-      //           borderRadius: BorderRadius.circular(14),
-      //           elevation: 20,
-      //           child: ClipRRect(
-      //             borderRadius: BorderRadius.circular(14),
-      //             child: Stack(
-      //               children: [
-      //                 Image.network(
-      //                   "https://cdn.redmondpie.com/wp-content/uploads/2021/06/ios-15-wallpapers-download-1200.jpg",
-      //                   fit: BoxFit.cover,
-      //                   height: 400,
-      //                 ),
-      //                 Container(
-      //                   height: 400,
-      //                   padding: const EdgeInsets.symmetric(
-      //                     horizontal: 25,
-      //                     vertical: 20,
-      //                   ),
-      //                   child: Column(
-      //                     crossAxisAlignment: CrossAxisAlignment.start,
-      //                     children: [
-      //                       Text(
-      //                         "Get started".toUpperCase(),
-      //                         style: TextStyle(
-      //                           color: Colors.grey[200],
-      //                           fontWeight: FontWeight.w600,
-      //                         ),
-      //                       ),
-      //                       const SizedBox(height: 5),
-      //                       const Text(
-      //                         "What's new for apps in iOS 15",
-      //                         style: TextStyle(
-      //                           color: Colors.white,
-      //                           fontWeight: FontWeight.bold,
-      //                           fontSize: 26,
-      //                         ),
-      //                       ),
-      //                       const Spacer(),
-      //                       const Text(
-      //                         "Safari extension, Focus, notification summary and more.",
-      //                         style: TextStyle(
-      //                           color: Colors.white,
-      //                         ),
-      //                       ),
-      //                     ],
-      //                   ),
-      //                 ),
-      //               ],
-      //             ),
-      //           ),
-      //         ),
-      //       ),
-      //     ),
-      //   ],
-      // ),
       body: Center(
         child: Column(
           children: [
