@@ -11,12 +11,19 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# flutter_bounceable
 
-## Features
+- A simple, interactive and customizable on-tap bounce animation that can be wrapped on any widgets that you like. 
+- You can create custom bouncing animation similarly to apps like **Spotify** and **App Store**. 
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Advantages
+
+- Truly simple and efficient.
+- Customizable bouncing animation using `curve`, `scaleFactor` and `duration`.
+- Options to control `onTap`, `onTapUp`, `onTapDown` and `onTapCancel`.
+- Enable and disable `onTap` option.
+- Not sticky when scrolling.
+- Does not navigate to multiple pages when tap on multiple `Bounceable` widget simultaneously.
 
 ## Getting started
 
@@ -25,11 +32,20 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
+Just wrap on any widget that you like:
 ```dart
-const like = 'sample';
+Bounceable(
+  onTap: () {},
+  child: ...
+);
+```
+or you can customize the bouncing animation to look like `react-native-bounceable` (https://www.npmjs.com/package/@freakycoder/react-native-bounceable):
+```dart
+Bounceable(
+  onTap: () {},
+  
+  child: ...
+);
 ```
 
 ## Additional information
