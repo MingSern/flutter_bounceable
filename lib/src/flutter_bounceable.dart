@@ -1,5 +1,3 @@
-library flutter_bounceable;
-
 import 'package:flutter/material.dart';
 
 class Bounceable extends StatefulWidget {

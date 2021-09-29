@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_bounceable/flutter_bounceable.dart';
+import 'package:flutter_bounceable/all.dart';
 
 class AppStoreView extends StatelessWidget {
   const AppStoreView({Key? key}) : super(key: key);
