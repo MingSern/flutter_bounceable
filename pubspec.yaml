@@ -1,6 +1,6 @@
 name: flutter_bounceable
-description: A new Flutter package project.
-version: 0.0.1
+description: A simple, interactive and customizable on-tap bounce animation that can be wrapped on any widgets that you like.
+version: 1.0.0
 homepage:
 
 environment:
