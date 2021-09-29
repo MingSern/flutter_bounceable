@@ -27,11 +27,11 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  flutter_bounceable:
-    path: ../
-
   flutter:
     sdk: flutter
+
+  flutter_bounceable:
+    path: ../
 
 
   # The following adds the Cupertino Icons font to your application.
