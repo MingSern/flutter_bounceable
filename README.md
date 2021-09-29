@@ -17,6 +17,15 @@ and the Flutter guide for
 - You can create custom bouncing animation similarly to apps like **Spotify** and **App Store**.
 - Package similar to [flutter_bounce](https://pub.dev/packages/flutter_bounce) and [bouncing_widget](https://pub.dev/packages/bouncing_widget).
 
+## Advantages:
+
+- Truly simple and efficient.
+- Customizable bouncing animation using `curve`, `scaleFactor` and `duration`.
+- Options to control `onTap`, `onTapUp`, `onTapDown` and `onTapCancel`.
+- Enable and disable `onTap` option.
+- Not sticky when scrolling.
+- Does not trigger multiple `onTap` events when tapped on multiple `Bounceable` widget simultaneously.
+
 ## 🚀 Installing:
 
 In your pubspec.yaml
@@ -42,14 +51,6 @@ Bounceable(
 
 <img src="https://github.com/MingSern/flutter_bounceable/blob/main/documentation/demo.gif" height="500">
 
-## Advantages:
-
-- Truly simple and efficient.
-- Customizable bouncing animation using `curve`, `scaleFactor` and `duration`.
-- Options to control `onTap`, `onTapUp`, `onTapDown` and `onTapCancel`.
-- Enable and disable `onTap` option.
-- Not sticky when scrolling.
-- Does not trigger multiple `onTap` events when tapped on multiple `Bounceable` widget simultaneously.
 
 ## Contributing:
 
