@@ -46,6 +46,10 @@ Bounceable(
 );
 ```
 
+## Demo:
+
+<img src="https://github.com/MingSern/flutter_bounceable/blob/main/documentation/demo.gif" height="500">
+
 ## Contributing:
 
 Feature requests and pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
