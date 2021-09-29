@@ -17,7 +17,7 @@ and the Flutter guide for
 - You can create custom bouncing animation similarly to apps like **Spotify** and **App Store**.
 - Package similar to [flutter_bounce](https://pub.dev/packages/flutter_bounce) and [bouncing_widget](https://pub.dev/packages/bouncing_widget).
 
-## Advantage:
+## Advantages:
 
 - Truly simple and efficient.
 - Customizable bouncing animation using `curve`, `scaleFactor` and `duration`.
