@@ -1,4 +1,4 @@
-import 'package:example/views/home_view.dart';
+import 'package:example/views/app_store_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +11,7 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Bounceable',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
@@ -23,7 +24,7 @@ class ExampleApp extends StatelessWidget {
         ),
         primarySwatch: Colors.grey,
       ),
-      home: const HomeView(),
+      home: const AppStoreView(),
     );
   }
 }
