@@ -49,7 +49,7 @@ Bounceable(
 
 ## Demo:
 
-<img src="https://github.com/MingSern/flutter_bounceable/blob/main/documentation/demo.gif" height="500">
+<img src="https://github.com/MingSern/flutter_bounceable/raw/main/documentation/demo.gif" height="500">
 
 
 ## Contributing:
