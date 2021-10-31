@@ -65,8 +65,8 @@ class _BounceableState extends State<Bounceable>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override
