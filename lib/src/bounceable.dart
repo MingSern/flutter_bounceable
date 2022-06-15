@@ -70,38 +70,46 @@ class _BounceableState extends State<Bounceable>
   }
 
   @override
+  void reassemble() {
+    super.reassemble();
+  }
+
+  void _onTap() {
+    if (widget.onTap != null) widget.onTap!();
+
+    _controller.reverse().then((_) {
+      _controller.forward();
+    });
+  }
+
+  void _onTapUp(TapUpDetails details) {
+    if (widget.onTapUp != null) widget.onTapUp!(details);
+    _controller.forward();
+  }
+
+  void _onTapDown(TapDownDetails details) {
+    if (widget.onTapDown != null) widget.onTapDown!(details);
+    _controller.reverse();
+  }
+
+  void _onTapCancel() {
+    if (widget.onTapCancel != null) widget.onTapCancel!();
+    _controller.forward();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    void onTap() {
-      if (widget.onTap != null) widget.onTap!();
-
-      _controller.reverse().then((_) {
-        _controller.forward();
-      });
-    }
-
-    void onTapUp(TapUpDetails details) {
-      if (widget.onTapUp != null) widget.onTapUp!(details);
-      _controller.forward();
-    }
-
-    void onTapDown(TapDownDetails details) {
-      if (widget.onTapDown != null) widget.onTapDown!(details);
-      _controller.reverse();
-    }
-
-    void onTapCancel() {
-      if (widget.onTapCancel != null) widget.onTapCancel!();
-      _controller.forward();
-    }
-
-    return GestureDetector(
-      onTapCancel: widget.onTap != null ? onTapCancel : null,
-      onTapDown: widget.onTap != null ? onTapDown : null,
-      onTapUp: widget.onTap != null ? onTapUp : null,
-      onTap: widget.onTap != null ? onTap : null,
-      child: ScaleTransition(
-        scale: _animation,
-        child: widget.child,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTapCancel: widget.onTap != null ? _onTapCancel : null,
+        onTapDown: widget.onTap != null ? _onTapDown : null,
+        onTapUp: widget.onTap != null ? _onTapUp : null,
+        onTap: widget.onTap != null ? _onTap : null,
+        child: ScaleTransition(
+          scale: _animation,
+          child: widget.child,
+        ),
       ),
     );
   }
