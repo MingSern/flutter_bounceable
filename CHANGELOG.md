@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Added mouse cursor pointer for bounceable widget.
+
 ## 1.0.2
 
 - Fixed ticker leak on widget disposed.
