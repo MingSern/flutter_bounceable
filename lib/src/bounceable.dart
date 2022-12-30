@@ -22,6 +22,9 @@ class Bounceable extends StatefulWidget {
   /// The scale factor of the child widget. The valid range of `scaleFactor` is from `0.0` to `1.0`.
   final double scaleFactor;
 
+  /// How the internal gesture detector should behave during hit testing.
+  final HitTestBehavior? hitTestBehavior;
+
   final Widget child;
 
   const Bounceable({
@@ -36,6 +39,7 @@ class Bounceable extends StatefulWidget {
     this.curve = Curves.decelerate,
     this.reverseCurve = Curves.decelerate,
     this.scaleFactor = 0.8,
+    this.hitTestBehavior,
   })  : assert(
           scaleFactor >= 0.0 && scaleFactor <= 1.0,
           "The valid range of scaleFactor is from 0.0 to 1.0.",
@@ -102,6 +106,7 @@ class _BounceableState extends State<Bounceable>
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
+        behavior: widget.hitTestBehavior,
         onTapCancel: widget.onTap != null ? _onTapCancel : null,
         onTapDown: widget.onTap != null ? _onTapDown : null,
         onTapUp: widget.onTap != null ? _onTapUp : null,
