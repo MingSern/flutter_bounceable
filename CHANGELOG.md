@@ -1,3 +1,7 @@
+## 1.1.0
+
+- Added `hitTestBehavior`.
+
 ## 1.0.3
 
 - Added mouse cursor pointer for bounceable widget.
