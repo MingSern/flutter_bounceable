@@ -32,7 +32,7 @@ In your pubspec.yaml
 
 ```yaml
 dependencies:
-  flutter_bounceable: ^1.0.2
+  flutter_bounceable: ^1.1.0
 ```
 
 ```dart
@@ -59,4 +59,5 @@ Bounceable(
 Feature requests and pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Support:
+
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/mingsern)
