@@ -6,6 +6,7 @@ class Bounceable extends StatefulWidget {
   final void Function(TapUpDetails)? onTapUp;
   final void Function(TapDownDetails)? onTapDown;
   final VoidCallback? onTapCancel;
+  final VoidCallback? onLongPress;
 
   /// The reverse duration of the scaling animation when `onTapUp`.
   final Duration? duration;
@@ -34,6 +35,7 @@ class Bounceable extends StatefulWidget {
     this.onTapUp,
     this.onTapDown,
     this.onTapCancel,
+    this.onLongPress,
     this.duration = const Duration(milliseconds: 200),
     this.reverseDuration = const Duration(milliseconds: 200),
     this.curve = Curves.decelerate,
@@ -50,8 +52,7 @@ class Bounceable extends StatefulWidget {
   _BounceableState createState() => _BounceableState();
 }
 
-class _BounceableState extends State<Bounceable>
-    with SingleTickerProviderStateMixin {
+class _BounceableState extends State<Bounceable> with SingleTickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     vsync: this,
     duration: widget.duration,
@@ -86,6 +87,14 @@ class _BounceableState extends State<Bounceable>
     });
   }
 
+  void _onLongPress() {
+    if (widget.onLongPress != null) widget.onLongPress!();
+
+    _controller.reverse().then((_) {
+      _controller.forward();
+    });
+  }
+
   void _onTapUp(TapUpDetails details) {
     if (widget.onTapUp != null) widget.onTapUp!(details);
     _controller.forward();
@@ -111,6 +120,7 @@ class _BounceableState extends State<Bounceable>
         onTapDown: widget.onTap != null ? _onTapDown : null,
         onTapUp: widget.onTap != null ? _onTapUp : null,
         onTap: widget.onTap != null ? _onTap : null,
+        onLongPress: widget.onLongPress != null ? _onLongPress : null,
         child: ScaleTransition(
           scale: _animation,
           child: widget.child,
