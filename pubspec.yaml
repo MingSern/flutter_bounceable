@@ -1,6 +1,6 @@
 name: flutter_bounceable
 description: A simple, interactive and customizable on-tap bounce animation that can be wrapped on any widgets that you like.
-version: 1.1.0
+version: 1.2.0
 repository: https://github.com/MingSern/flutter_bounceable
 issue_tracker: https://github.com/MingSern/flutter_bounceable/issues
 

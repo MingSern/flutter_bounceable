@@ -1,3 +1,7 @@
+## 1.2.0
+
+- Added `onLongPress`.
+
 ## 1.1.0
 
 - Added `hitTestBehavior`.
