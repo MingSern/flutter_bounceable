@@ -21,7 +21,7 @@ and the Flutter guide for
 
 - Truly simple and efficient.
 - Customizable bouncing animation using `curve`, `scaleFactor` and `duration`.
-- Options to control `onTap`, `onTapUp`, `onTapDown` and `onTapCancel`.
+- Options to control `onTap`, `onTapUp`, `onTapDown`, `onTapCancel` and `onLongPress`.
 - Enable and disable `onTap` option.
 - Not sticky when scrolling.
 - Does not trigger multiple `onTap` events when tapped on multiple `Bounceable` widget simultaneously.
